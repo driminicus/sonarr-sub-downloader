@@ -13,11 +13,7 @@ The script [search-wanted.sh](wanted/search-wanted.sh)` looks for those subtitle
 Behind the scenes, both scripts uses [subliminal](3) as subtitle downloader engine.
 
 # Prerequisites
-- Install the [subliminal plugin][3]
-   - I **highly** recommend follow the author steps for install subliminal, but you can execute:
-   ```bash
-   sudo pip install -U subliminal
-   ```
+Have Docker available, this will run [subliminal][3].
 
 # How to setup the script in Sonarr
 1. Download the [latest][4] release (zip or tar.gz) file.

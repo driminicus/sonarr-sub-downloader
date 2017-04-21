@@ -10,7 +10,8 @@ while IFS=':' read -a line; do
   SRT=${line[1]}
   LANG=`echo $SRT | sed -e "s/\.srt//g" -e "s/.*\(..\)/\1/"`
   echo "subliminal download -l $LANG $SOURCE"
-  subliminal download -l $LANG "$SOURCE"
+  docker run --rm --name subliminal -v subliminal_cache:/usr/src/cache -v /data/nethdd/Series:/tv -i diaoulael/subliminal download -l ${LANGUAGES}  "${EPISODE_PATH}" >> $LOG_FILE 2>&1
+
   if [[ ! -f $SRT ]]; then
     IFS=''
     MISSED="$SOURCE:$SRT\n$MISSED"

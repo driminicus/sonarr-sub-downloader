@@ -34,10 +34,11 @@ Have Docker available, this will run [subliminal][3].
 ![alt example](https://raw.githubusercontent.com/ebergama/sonarr-sub-downloader/master/example/example.png)
 
 # How to enable the not found searcher to run periodically
-1. Run [the installation script](wanted/install.sh) 
+1. Edit the INVOLUMEPATH= and REALPATH= to correspond the proper path of the docker volumes and real path of the location where sonarr downloads the episodes to
+2. Run [the installation script](wanted/install.sh) 
          
          ./wanted/install.sh
-2. Check that the crontab has been setup correctly
+3. Check that the crontab has been setup correctly
 
          crontab -l
 

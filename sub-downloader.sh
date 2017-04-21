@@ -49,8 +49,7 @@ fi
 
 doLog "Looking for subtitles for: ${EPISODE_PATH}"
 
-doLog "Executing subliminal"
-doLog "Adding ${EPISODE_PATH} with ${LANGUAGES} to wanted file"
+doLog "Adding ${EPISODE_PATH} with ${LANGUAGES} to wanted file (if no subtitle file exists)"
 # Look for not found subtitles
 declare LANG_ARRAY=($(echo ${LANGUAGES} | sed "s/-l //g"))
 

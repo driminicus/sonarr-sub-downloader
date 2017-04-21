@@ -1,5 +1,7 @@
 # sonarr-sub-downloader
 Sonarr custom post processor script for handling subtitle download.
+Lazily edited to work with docker containers. The initial run doesn't actuall search subtitles, but only adds it to 'wanted' so in order for this to work the wanted search script has to be added to crontab.
+You should use the same volume for the series folder in the subliminal as you use in the sonarr docker container.
 
 # Summary
 This project contains 2 main bash scripts for handling Sonarr subtitle download after a TV show has been downloaded.

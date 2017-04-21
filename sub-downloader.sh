@@ -51,7 +51,7 @@ doLog "Looking for subtitles for: ${EPISODE_PATH}"
 
 doLog "Executing subliminal"
 doLog "subliminal download ${LANGUAGES} ${EPISODE_PATH}"
-subliminal download ${LANGUAGES} "${EPISODE_PATH}" >> $LOG_FILE 2>&1
+docker run --rm --name subliminal -v subliminal_cache:/usr/src/cache -v /data/nethdd/Series:/tv -it diaoulael/subliminal download -l ${LANGUAGES}  "${EPISODE_PATH}" >> $LOG_FILE 2>&1
   
 # Look for not found subtitles
 declare LANG_ARRAY=($(echo ${LANGUAGES} | sed "s/-l //g"))

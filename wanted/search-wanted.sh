@@ -11,7 +11,8 @@ while IFS=':' read -a line; do
   SRT=${line[1]}
   LANG=`echo $SRT | sed -e "s/\.srt//g" -e "s/.*\(..\)/\1/"`
   echo "subliminal download -l $LANG $SOURCE"
-  docker run --rm --name subliminal -v subliminal_cache:/usr/src/cache -v /data/nethdd/Series:/tv -i diaoulael/subliminal download -l ${LANGUAGES}  "${EPISODE_PATH}" >> $LOG_FILE 2>&1
+  docker run --rm -v subliminal_cache:/usr/src/cache -v /data/nethdd/Series:/tv -i diaoulael/subliminal download -l ${LANGUAGES}  "${EPISODE_PATH}" >> $LOG_FILE 2>&1 &
+  sleep 5
   SEARCHSRT=`echo $SRT | sed -e "s/$INVOLUMEPATH/$REALPATH/g"`
   if [[ ! -f $SEARCHSRT ]]; then
     IFS=''

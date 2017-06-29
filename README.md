@@ -46,7 +46,11 @@ Have Docker available, this will run [subliminal][3].
 MIT
 
 # Developer Information
+
+Original developer:
 Ezequiel Bergamaschi - ezequielbergamaschi@gmail.com
+
+Edited by Driminicus to run in docker containers.
 
 [1]: https://github.com/Sonarr/Sonarr
 [2]: https://github.com/Sonarr/Sonarr/wiki/Custom-Post-Processing-Scripts
